@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvJudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Haya Sparkle"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvPersegi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Persegi (Bangun Datar)"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvJudul"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/etSisi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Sisi"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/tvPersegi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTabung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tabung (Bangun Ruang)"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/etSisi"
+        android:layout_marginTop="24dp"/>
+
+    <EditText
+        android:id="@+id/etJariJari"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Jari-jari (r)"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/tvTabung"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/etTinggiTabung"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Tinggi Tabung"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/etJariJari"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnHitung"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hitung Sekarang"
+        app:layout_constraintTop_toBottomOf="@id/etTinggiTabung"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/tvHasil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hasil perhitungan akan muncul di sini"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/btnHitung"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
