@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Haya-Sparkle</string>
+    <string name="app_name">Login Apps</string>
+    <string name="title">Haya App</string>
+    <string name="deskripsi">Selamat datang, silakan login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="welcome">Selamat Datang</string>
 </resources>
