@@ -12,63 +12,78 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="24dp"
-        app:cardElevation="6dp"
-        android:padding="20dp">
+        android:layout_margin="12dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center_horizontal"
+            android:padding="28dp">
 
+            <!-- Logo -->
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:src="@drawable/logobunga"
-                android:layout_marginBottom="12dp" />
+                android:layout_marginBottom="16dp" />
 
+            <!-- Title -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/title"
-                android:textSize="24sp"
+                android:textSize="28sp"
                 android:textStyle="bold"
-                android:textColor="@color/textColor"
-                android:fontFamily="@font/crimsontext_semibold"/>
+                android:textColor="@color/softPinkDark"
+                android:fontFamily="@font/crimsontext_semibold" />
 
+            <!-- Subtitle -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/deskripsi"
                 android:textSize="14sp"
                 android:textColor="@color/gray"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="24dp" />
 
+            <!-- Username -->
             <EditText
                 android:id="@+id/inputUsername"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="52dp"
                 android:hint="@string/username"
-                android:padding="12dp" />
+                android:padding="14dp"
+                android:backgroundTint="@color/softPink"
+                android:textColor="@color/textColor" />
 
+            <!-- Password -->
             <EditText
                 android:id="@+id/inputPassword"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="52dp"
                 android:hint="@string/password"
                 android:inputType="textPassword"
-                android:padding="12dp"
-                android:layout_marginTop="12dp" />
+                android:padding="14dp"
+                android:backgroundTint="@color/softPink"
+                android:textColor="@color/textColor"
+                android:layout_marginTop="14dp" />
 
+            <!-- Login Button -->
             <Button
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="54dp"
                 android:text="@string/login"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/primaryColor"
-                android:layout_marginTop="20dp"/>
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/softPinkDark"
+                android:backgroundTint="@color/softPink"
+                android:layout_marginTop="24dp" />
 
         </LinearLayout>
 

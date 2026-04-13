@@ -6,4 +6,9 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="welcome">Selamat Datang</string>
+    <string name="layanan">Layanan Kami</string>
+    <string name="pilihan">Pilihan bouquet terbaik</string>
+    <string name="beauty">Beauty in Every Bloom</string>
+    <string name="deskCustom2">• Bouquet Wisuda&#10;• Bouquet Ulang Tahun&#10;• Custom Bouquet&#10;• Anniversary Bouquet</string>
+    <string name="deskCustom1">Kami menyediakan bouquet bunga terbaik untuk berbagai momen spesial</string>
 </resources>

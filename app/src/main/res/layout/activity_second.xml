@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/secondaryColor"
     android:padding="16dp">
 
     <TextView
@@ -14,6 +15,7 @@
         android:text="Haya Sparkle"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="@color/textColor"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
@@ -24,6 +26,7 @@
         android:text="Persegi (Bangun Datar)"
         android:textStyle="bold"
         android:textSize="18sp"
+        android:textColor="@color/textColor"
         app:layout_constraintTop_toBottomOf="@id/tvJudul"
         android:layout_marginTop="16dp"/>
 
@@ -32,6 +35,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Masukkan Sisi"
+        android:textColor="@color/textColor"
         android:inputType="numberDecimal"
         app:layout_constraintTop_toBottomOf="@id/tvPersegi"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +48,7 @@
         android:text="Tabung (Bangun Ruang)"
         android:textStyle="bold"
         android:textSize="18sp"
+        android:textColor="@color/textColor"
         app:layout_constraintTop_toBottomOf="@id/etSisi"
         android:layout_marginTop="24dp"/>
 
@@ -53,6 +58,7 @@
         android:layout_height="wrap_content"
         android:hint="Jari-jari (r)"
         android:inputType="numberDecimal"
+        android:textColor="@color/textColor"
         app:layout_constraintTop_toBottomOf="@id/tvTabung"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -63,6 +69,7 @@
         android:layout_height="wrap_content"
         android:hint="Tinggi Tabung"
         android:inputType="numberDecimal"
+        android:textColor="@color/textColor"
         app:layout_constraintTop_toBottomOf="@id/etJariJari"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -75,6 +82,8 @@
         app:layout_constraintTop_toBottomOf="@id/etTinggiTabung"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/softPinkDark"
+        android:backgroundTint="@color/softPink"
         android:layout_marginTop="24dp"/>
 
     <TextView
@@ -84,6 +93,7 @@
         android:text="Hasil perhitungan akan muncul di sini"
         android:textSize="16sp"
         android:textAlignment="center"
+        android:textColor="@color/textColor"
         app:layout_constraintTop_toBottomOf="@id/btnHitung"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
