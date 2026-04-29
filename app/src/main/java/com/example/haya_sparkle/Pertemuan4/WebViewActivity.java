@@ -18,18 +18,20 @@ public class WebViewActivity extends AppCompatActivity {
         binding = ActivityWebviewBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        //  Toolbar
+        //  TOOLBAR
         setSupportActionBar(binding.toolbar);
-        getSupportActionBar().setTitle("Web Bina Desa");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Web Bina Desa");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         binding.toolbar.setNavigationOnClickListener(v -> finish());
 
-        //  WebView
+        //  WEBVIEW
         binding.webview.setWebViewClient(new WebViewClient());
         binding.webview.getSettings().setJavaScriptEnabled(true);
 
-        //  URL WEBSITE KAMU
         binding.webview.loadUrl("https://haya-bansosguest.alwaysdata.net/dashboard");
     }
 }

@@ -4,9 +4,9 @@
     <color name="primaryColor">#3E97FF</color>
     <color name="secondaryColor">#BECEE6</color>
     <color name="textColor">#222222</color>
-    <color name="softPink">#FFDEEF</color>
-    <color name="softPinkDark">#E65F98</color>
-    <color name="softPinkBg">#FDF2F8</color>
+<!--    <color name="softPink">#FFDEEF</color>-->
+<!--    <color name="softPinkDark">#E65F98</color>-->
+<!--    <color name="softPinkBg">#FDF2F8</color>-->
 
     <!--  WARNA BINA DESA -->
     <color name="primaryGreen">#0F7A66</color>
