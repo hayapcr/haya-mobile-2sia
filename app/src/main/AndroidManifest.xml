@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <!--   UNTUK WEBVIEW -->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- UNTUK WEBVIEW -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,50 +10,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HayaSparkle">
-
-        <!--  SPLASH (LAUNCHER) -->
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".BaseActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
 
-        <!--  LOGIN -->
+        </activity>
+        <activity
+            android:name=".Pertemuan6.SixthActivity"
+            android:exported="false" /> <!-- SPLASH (LAUNCHER) -->
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="false" /> <!-- LOGIN -->
         <activity
             android:name=".Pertemuan3.WelcomeActivity"
-            android:exported="false" />
-
-        <!--  DASHBOARD -->
+            android:exported="false" /> <!-- DASHBOARD -->
         <activity
             android:name=".Pertemuan4.DashboardActivity"
-            android:exported="false" />
-
-        <!--  WEBVIEW -->
+            android:exported="false" /> <!-- WEBVIEW -->
         <activity
             android:name=".Pertemuan4.WebViewActivity"
-            android:exported="false" />
-
-        <!--  MENU -->
+            android:exported="false" /> <!-- MENU -->
         <activity
             android:name=".Pertemuan4.Custom1Activity"
             android:exported="false" />
-
         <activity
             android:name=".Pertemuan4.Custom2Activity"
             android:exported="false" />
-
         <activity
             android:name=".Pertemuan2.SecondActivity"
-            android:exported="false" />
-
-        <!-- OPTIONAL -->
+            android:exported="false" /> <!-- OPTIONAL -->
         <activity
             android:name=".Pertemuan3.MainActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>

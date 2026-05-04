@@ -11,4 +11,6 @@
     <string name="beauty">Beauty in Every Bloom</string>
     <string name="deskCustom2">• Bouquet Wisuda&#10;• Bouquet Ulang Tahun&#10;• Custom Bouquet&#10;• Anniversary Bouquet</string>
     <string name="deskCustom1">Kami menyediakan bouquet bunga terbaik untuk berbagai momen spesial</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.haya_sparkle.Pertemuan3.WelcomeActivity;
+import com.example.haya_sparkle.Pertemuan6.SixthActivity;
 import com.example.haya_sparkle.databinding.ActivityDashboardBinding;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
@@ -32,6 +33,11 @@ public class DashboardActivity extends AppCompatActivity {
         //  BUTTON WEBVIEW
         binding.btnWeb.setOnClickListener(v -> {
             startActivity(new Intent(DashboardActivity.this, WebViewActivity.class));
+        });
+
+        binding.btnPertemuan6.setOnClickListener(v -> {
+            Intent intent = new Intent(DashboardActivity.this, SixthActivity.class);
+            startActivity(intent);
         });
 
         //  LOGOUT

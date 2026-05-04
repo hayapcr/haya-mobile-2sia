@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/accentGreen">
+
+    <!-- 🔝 TOOLBAR -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primaryGreen"
+        android:title="Home"
+        android:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 📜 SCROLL AREA -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 🎯 CARD UTAMA -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/primaryGreen">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="24dp">
+
+                    <!-- LOGO -->
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/logobansos"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- JUDUL -->
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Membangun Desa yang Sejahtera"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <!-- DESKRIPSI -->
+                    <TextView
+                        android:id="@+id/tvDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Menyalurkan bantuan sosial dengan transparan, efisien, dan tepat sasaran."
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:layout_marginTop="8dp"/>
+
+                    <!-- 🔲 GRID MENU -->
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:useDefaultMargins="true"
+                        android:layout_marginTop="20dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_columnWeight="1"
+                            android:text="Program Bantuan"
+                            android:textColor="@color/primaryGreen"
+                            app:cornerRadius="30dp"
+                            app:backgroundTint="@color/white"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_columnWeight="1"
+                            android:text="Data Warga"
+                            android:textColor="@color/primaryGreen"
+                            app:cornerRadius="30dp"
+                            app:backgroundTint="@color/white"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_columnWeight="1"
+                            android:text="Data User"
+                            android:textColor="@color/primaryGreen"
+                            app:cornerRadius="30dp"
+                            app:backgroundTint="@color/white"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_columnWeight="1"
+                            android:text="Pendaftar Bantuan"
+                            android:textColor="@color/primaryGreen"
+                            app:cornerRadius="30dp"
+                            app:backgroundTint="@color/white"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_columnWeight="1"
+                            android:text="Verifikasi Lapangan"
+                            android:textColor="@color/primaryGreen"
+                            app:cornerRadius="30dp"
+                            app:backgroundTint="@color/white"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_columnWeight="1"
+                            android:text="Penerima Bantuan"
+                            android:textColor="@color/primaryGreen"
+                            app:cornerRadius="30dp"
+                            app:backgroundTint="@color/white"/>
+
+                    </GridLayout>
+
+                    <!-- BUTTON FULL -->
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Riwayat Penyaluran"
+                        android:textColor="@color/primaryGreen"
+                        android:layout_marginTop="12dp"
+                        app:cornerRadius="30dp"
+                        app:backgroundTint="@color/white"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
