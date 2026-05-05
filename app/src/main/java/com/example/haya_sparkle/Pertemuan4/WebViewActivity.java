@@ -32,6 +32,6 @@ public class WebViewActivity extends AppCompatActivity {
         binding.webview.setWebViewClient(new WebViewClient());
         binding.webview.getSettings().setJavaScriptEnabled(true);
 
-        binding.webview.loadUrl("https://haya-bansosguest.alwaysdata.net/dashboard");
+        binding.webview.loadUrl("https://haya-bansosguest.alwaysdata.net/");
     }
 }

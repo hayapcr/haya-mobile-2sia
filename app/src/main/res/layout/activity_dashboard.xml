@@ -105,7 +105,7 @@
                     android:layout_margin="4dp"
                     android:text="Pendaftar Bantuan"
                     android:textAllCaps="false"
-                    android:textSize="12sp" />
+                    android:textSize="11sp" />
 
                 <Button
                     android:id="@+id/btnVerifikasi"
@@ -115,7 +115,7 @@
                     android:layout_margin="4dp"
                     android:text="Verifikasi Lapangan"
                     android:textAllCaps="false"
-                    android:textSize="12sp" />
+                    android:textSize="10sp" />
 
             </GridLayout>
 
@@ -146,7 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:text="Pertemuan 6 (Fragment)"
+                android:text="Tentang Kami"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:background="@drawable/bg_outline_white"

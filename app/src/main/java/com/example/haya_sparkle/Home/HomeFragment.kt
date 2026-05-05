@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import com.example.haya_sparkle.BaseActivity
+import com.example.haya_sparkle.Pertemuan4.DashboardActivity
 import com.example.haya_sparkle.R
 import com.example.haya_sparkle.databinding.FragmentHomeBinding
 
@@ -28,6 +30,12 @@ class HomeFragment : Fragment() {
         // Toolbar (sesuai materi)
         (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
         (requireActivity() as AppCompatActivity).supportActionBar?.title = "Home"
+
+
+        binding.toolbar.setNavigationOnClickListener {
+            startActivity(Intent(requireContext(), DashboardActivity::class.java))
+            requireActivity().finish()
+        }
     }
 
     override fun onDestroyView() {

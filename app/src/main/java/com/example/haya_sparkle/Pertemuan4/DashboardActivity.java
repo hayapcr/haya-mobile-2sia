@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.haya_sparkle.BaseActivity;
 import com.example.haya_sparkle.Pertemuan3.WelcomeActivity;
 import com.example.haya_sparkle.Pertemuan6.SixthActivity;
 import com.example.haya_sparkle.databinding.ActivityDashboardBinding;
@@ -36,7 +37,7 @@ public class DashboardActivity extends AppCompatActivity {
         });
 
         binding.btnPertemuan6.setOnClickListener(v -> {
-            Intent intent = new Intent(DashboardActivity.this, SixthActivity.class);
+            Intent intent = new Intent(DashboardActivity.this, BaseActivity.class);
             startActivity(intent);
         });
 

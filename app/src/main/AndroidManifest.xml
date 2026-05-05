@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HayaSparkle">
         <activity
-            android:name=".BaseActivity"
+            android:name=".SplashScreenActivity"
             android:exported="true">
 
             <intent-filter>
@@ -24,7 +24,7 @@
             android:name=".Pertemuan6.SixthActivity"
             android:exported="false" /> <!-- SPLASH (LAUNCHER) -->
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".BaseActivity"
             android:exported="false" /> <!-- LOGIN -->
         <activity
             android:name=".Pertemuan3.WelcomeActivity"
