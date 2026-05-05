@@ -21,10 +21,10 @@ class BaseActivity : AppCompatActivity() {
         binding = ActivityBaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // 🔥 Default fragment
+        // Default fragment
         replaceFragment(HomeFragment())
 
-        // 🔥 Bottom Navigation
+        // Bottom Navigation
         binding.bottomNavView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> {
