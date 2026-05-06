@@ -101,6 +101,16 @@
                 android:backgroundTint="@color/primaryGreen"
                 android:textColor="@android:color/white"/>
 
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belum punya akun? Register"
+                android:textStyle="bold"
+                android:textColor="@color/primaryGreen"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"/>
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
