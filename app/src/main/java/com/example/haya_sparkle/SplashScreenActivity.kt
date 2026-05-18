@@ -5,9 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-
 import com.example.haya_sparkle.Pertemuan3.WelcomeActivity
-import com.example.haya_sparkle.Pertemuan4.DashboardActivity
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -22,12 +20,18 @@ class SplashScreenActivity : AppCompatActivity() {
             val isLogin = sharedPref.getBoolean("isLogin", false)
 
             if (isLogin) {
-                startActivity(Intent(this, DashboardActivity::class.java))
+
+                // MASUK KE HOME (BASEACTIVITY)
+                startActivity(Intent(this, BaseActivity::class.java))
+
             } else {
+
+                // KE HALAMAN LOGIN
                 startActivity(Intent(this, WelcomeActivity::class.java))
             }
 
             finish()
+
         }, 2000)
     }
 }

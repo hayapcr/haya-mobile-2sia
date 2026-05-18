@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/accentGreen">
 
-    <!-- 🔝 TOOLBAR -->
+    <!-- TOOLBAR -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
@@ -16,10 +16,9 @@
         android:titleTextColor="@android:color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:navigationIcon="@drawable/ic_arrow_back"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- 📜 SCROLL AREA -->
+    <!-- SCROLL AREA -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -34,7 +33,7 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- 🎯 CARD UTAMA -->
+            <!-- CARD -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -51,8 +50,8 @@
 
                     <!-- LOGO -->
                     <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/logobansos"
                         android:layout_marginBottom="16dp"/>
 
@@ -61,9 +60,9 @@
                         android:id="@+id/tvTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Membangun Desa yang Sejahtera"
+                        android:text="SIBANSOS"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="24sp"
                         android:textStyle="bold"
                         android:gravity="center"/>
 
@@ -72,80 +71,85 @@
                         android:id="@+id/tvDesc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Menyalurkan bantuan sosial dengan transparan, efisien, dan tepat sasaran."
+                        android:text="Menu pembelajaran dan fitur aplikasi Bina Desa"
                         android:textColor="@color/white"
                         android:gravity="center"
-                        android:textSize="13sp"
-                        android:layout_marginTop="8dp"/>
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="24dp"/>
 
-                    <!-- 🔲 GRID MENU -->
-                    <GridLayout
+                    <!-- GRID LAYOUT -->
+                    <androidx.gridlayout.widget.GridLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:columnCount="2"
-                        android:useDefaultMargins="true"
-                        android:layout_marginTop="20dp">
+                        app:columnCount="2"
+                        app:useDefaultMargins="true">
 
-
+                        <!-- CUSTOM 1 -->
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnCustom1"
                             android:layout_width="0dp"
-                            android:layout_columnWeight="1"
-                            android:text="Program Bantuan"
+                            android:layout_height="wrap_content"
+                            android:text="Custom 1"
+                            android:textAllCaps="false"
                             android:textColor="@color/primaryGreen"
-                            app:cornerRadius="30dp"
-                            app:backgroundTint="@color/white"/>
+                            app:icon="@drawable/ic_custom1"
+                            app:iconGravity="textTop"
+                            app:iconPadding="8dp"
+                            app:cornerRadius="20dp"
+                            app:backgroundTint="@color/white"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill_horizontal"/>
 
+                        <!-- CUSTOM 2 -->
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnCustom2"
                             android:layout_width="0dp"
-                            android:layout_columnWeight="1"
-                            android:text="Data Warga"
+                            android:layout_height="wrap_content"
+                            android:text="Custom 2"
+                            android:textAllCaps="false"
                             android:textColor="@color/primaryGreen"
-                            app:cornerRadius="30dp"
-                            app:backgroundTint="@color/white"/>
+                            app:icon="@drawable/ic_custom2"
+                            app:iconGravity="textTop"
+                            app:iconPadding="8dp"
+                            app:cornerRadius="20dp"
+                            app:backgroundTint="@color/white"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill_horizontal"/>
 
+                        <!-- RUMUS -->
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnRumus"
                             android:layout_width="0dp"
-                            android:layout_columnWeight="1"
-                            android:text="Data User"
+                            android:layout_height="wrap_content"
+                            android:text="Rumus"
+                            android:textAllCaps="false"
                             android:textColor="@color/primaryGreen"
-                            app:cornerRadius="30dp"
-                            app:backgroundTint="@color/white"/>
+                            app:icon="@drawable/ic_rumus"
+                            app:iconGravity="textTop"
+                            app:iconPadding="8dp"
+                            app:cornerRadius="20dp"
+                            app:backgroundTint="@color/white"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill_horizontal"/>
 
+                        <!-- WEBVIEW -->
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnWebview"
                             android:layout_width="0dp"
-                            android:layout_columnWeight="1"
-                            android:text="Pendaftar Bantuan"
+                            android:layout_height="wrap_content"
+                            android:text="WebView"
+                            android:textAllCaps="false"
                             android:textColor="@color/primaryGreen"
-                            app:cornerRadius="30dp"
-                            app:backgroundTint="@color/white"/>
+                            app:icon="@drawable/ic_webview"
+                            app:iconGravity="textTop"
+                            app:iconPadding="8dp"
+                            app:cornerRadius="20dp"
+                            app:backgroundTint="@color/white"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill_horizontal"/>
 
-                        <com.google.android.material.button.MaterialButton
-                            android:layout_width="0dp"
-                            android:layout_columnWeight="1"
-                            android:text="Verifikasi Lapangan"
-                            android:textColor="@color/primaryGreen"
-                            app:cornerRadius="30dp"
-                            app:backgroundTint="@color/white"/>
-
-                        <com.google.android.material.button.MaterialButton
-                            android:layout_width="0dp"
-                            android:layout_columnWeight="1"
-                            android:text="Penerima Bantuan"
-                            android:textColor="@color/primaryGreen"
-                            app:cornerRadius="30dp"
-                            app:backgroundTint="@color/white"/>
-
-                    </GridLayout>
-
-                    <!-- BUTTON FULL -->
-                    <com.google.android.material.button.MaterialButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Riwayat Penyaluran"
-                        android:textColor="@color/primaryGreen"
-                        android:layout_marginTop="12dp"
-                        app:cornerRadius="30dp"
-                        app:backgroundTint="@color/white"/>
+                    </androidx.gridlayout.widget.GridLayout>
 
                 </LinearLayout>
 

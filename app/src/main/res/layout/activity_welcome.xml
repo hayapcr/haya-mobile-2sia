@@ -18,7 +18,7 @@
         android:layout_height="match_parent"
         android:background="#80000000"/>
 
-    <!-- CardView  -->
+    <!-- Card Login -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
                 android:src="@drawable/logobansos"
                 android:layout_gravity="center"/>
 
-            <!-- Title -->
+            <!-- Judul -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -60,9 +60,9 @@
                 android:textSize="12sp"
                 android:textColor="@color/gray"
                 android:layout_gravity="center"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="12dp"/>
 
-            <!-- Login -->
+            <!-- LOGIN -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -73,33 +73,65 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- Email -->
-            <EditText
-                android:id="@+id/etEmail"
+            <!-- EMAIL -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
-                android:padding="10dp"/>
+                app:startIconDrawable="@drawable/ic_email">
 
-            <!-- Password -->
-            <EditText
-                android:id="@+id/etPassword"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- PASSWORD -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:hint="Password"
-                android:inputType="textPassword"
-                android:layout_marginTop="8dp"
-                android:padding="10dp"/>
+                app:startIconDrawable="@drawable/ic_key"
+                app:endIconMode="password_toggle">
 
-            <!-- Button -->
-            <Button
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- BUTTON LOGIN -->
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Masuk"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="@color/primaryGreen"
-                android:textColor="@android:color/white"/>
+                android:layout_marginTop="20dp"
+                android:text="Login"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@color/primaryGreen"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_email"
+                app:iconGravity="textStart"/>
+
+
+
+            <!-- REGISTER -->
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belum punya akun? Register"
+                android:textStyle="bold"
+                android:textColor="@color/primaryGreen"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"/>
 
         </LinearLayout>
 

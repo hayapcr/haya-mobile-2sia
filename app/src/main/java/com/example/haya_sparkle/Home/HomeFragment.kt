@@ -7,9 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import com.example.haya_sparkle.BaseActivity
-import com.example.haya_sparkle.Pertemuan4.DashboardActivity
-import com.example.haya_sparkle.R
+import com.example.haya_sparkle.Pertemuan2.SecondActivity
+import com.example.haya_sparkle.Pertemuan4.Custom1Activity
+import com.example.haya_sparkle.Pertemuan4.Custom2Activity
+import com.example.haya_sparkle.Pertemuan4.WebViewActivity
 import com.example.haya_sparkle.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -21,20 +22,62 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        // Toolbar (sesuai materi)
-        (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
-        (requireActivity() as AppCompatActivity).supportActionBar?.title = "Home"
+        // TOOLBAR
+        (requireActivity() as AppCompatActivity)
+            .setSupportActionBar(binding.toolbar)
 
+        (requireActivity() as AppCompatActivity)
+            .supportActionBar?.title = "Home"
 
-        binding.toolbar.setNavigationOnClickListener {
-            startActivity(Intent(requireContext(), DashboardActivity::class.java))
-            requireActivity().finish()
+        // CUSTOM 1
+        binding.btnCustom1.setOnClickListener {
+
+            startActivity(
+                Intent(
+                    requireContext(),
+                    Custom1Activity::class.java
+                )
+            )
+        }
+
+        // CUSTOM 2
+        binding.btnCustom2.setOnClickListener {
+
+            startActivity(
+                Intent(
+                    requireContext(),
+                    Custom2Activity::class.java
+                )
+            )
+        }
+
+        // RUMUS
+        binding.btnRumus.setOnClickListener {
+
+            startActivity(
+                Intent(
+                    requireContext(),
+                    SecondActivity::class.java
+                )
+            )
+        }
+
+        // WEBVIEW
+        binding.btnWebview.setOnClickListener {
+
+            startActivity(
+                Intent(
+                    requireContext(),
+                    WebViewActivity::class.java
+                )
+            )
         }
     }
 

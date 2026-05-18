@@ -9,44 +9,56 @@ import androidx.fragment.app.Fragment
 import com.example.haya_sparkle.About.MessageFragment
 import com.example.haya_sparkle.Home.HomeFragment
 import com.example.haya_sparkle.Profile.MoreFragment
+import com.example.haya_sparkle.Settings.SettingsFragment
 import com.example.haya_sparkle.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityBaseBinding
+        private lateinit var binding: ActivityBaseBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
 
-        binding = ActivityBaseBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+            binding = ActivityBaseBinding.inflate(layoutInflater)
+            setContentView(binding.root)
 
-        // Default fragment
-        replaceFragment(HomeFragment())
+            // Default Fragment
+            replaceFragment(HomeFragment())
 
-        // Bottom Navigation
-        binding.bottomNavView.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.home -> {
-                    replaceFragment(HomeFragment())
-                    true
+            // Bottom Navigation
+            binding.bottomNavView.setOnItemSelectedListener {
+
+                when (it.itemId) {
+
+                    R.id.home -> {
+                        replaceFragment(HomeFragment())
+                        true
+                    }
+
+                    R.id.message -> {
+                        replaceFragment(MessageFragment())
+                        true
+                    }
+
+                    R.id.more -> {
+                        replaceFragment(MoreFragment())
+                        true
+                    }
+
+                    R.id.settings -> {
+                        replaceFragment(SettingsFragment())
+                        true
+                    }
+
+                    else -> false
                 }
-                R.id.message -> {
-                    replaceFragment(MessageFragment())
-                    true
-                }
-                R.id.more -> {
-                    replaceFragment(MoreFragment())
-                    true
-                }
-                else -> false
             }
         }
-    }
 
-    private fun replaceFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(binding.fragmentContainer.id, fragment)
-            .commit()
+        private fun replaceFragment(fragment: Fragment) {
+
+            supportFragmentManager.beginTransaction()
+                .replace(binding.fragmentContainer.id, fragment)
+                .commit()
+        }
     }
-}
