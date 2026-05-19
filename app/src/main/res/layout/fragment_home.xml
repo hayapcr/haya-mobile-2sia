@@ -94,6 +94,8 @@
                             android:textAllCaps="false"
                             android:textColor="@color/primaryGreen"
                             app:icon="@drawable/ic_custom1"
+                            app:iconSize="32dp"
+                            app:iconTint="@color/primaryGreen"
                             app:iconGravity="textTop"
                             app:iconPadding="8dp"
                             app:cornerRadius="20dp"
@@ -110,6 +112,8 @@
                             android:textAllCaps="false"
                             android:textColor="@color/primaryGreen"
                             app:icon="@drawable/ic_custom2"
+                            app:iconSize="32dp"
+                            app:iconTint="@color/primaryGreen"
                             app:iconGravity="textTop"
                             app:iconPadding="8dp"
                             app:cornerRadius="20dp"
@@ -126,6 +130,8 @@
                             android:textAllCaps="false"
                             android:textColor="@color/primaryGreen"
                             app:icon="@drawable/ic_rumus"
+                            app:iconSize="32dp"
+                            app:iconTint="@color/primaryGreen"
                             app:iconGravity="textTop"
                             app:iconPadding="8dp"
                             app:cornerRadius="20dp"
@@ -142,12 +148,15 @@
                             android:textAllCaps="false"
                             android:textColor="@color/primaryGreen"
                             app:icon="@drawable/ic_webview"
+                            app:iconSize="32dp"
+                            app:iconTint="@color/primaryGreen"
                             app:iconGravity="textTop"
                             app:iconPadding="8dp"
                             app:cornerRadius="20dp"
                             app:backgroundTint="@color/white"
                             app:layout_columnWeight="1"
                             app:layout_gravity="fill_horizontal"/>
+
 
                     </androidx.gridlayout.widget.GridLayout>
 

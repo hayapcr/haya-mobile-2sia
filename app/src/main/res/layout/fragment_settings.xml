@@ -7,17 +7,16 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!-- TOOLBAR -->
+    <!-- APP BAR -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:navigationIcon="@drawable/ic_arrow_back">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/white">
 
             <!-- TOOLBAR -->
             <com.google.android.material.appbar.MaterialToolbar
@@ -34,37 +33,61 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:background="@color/white"
-                app:singleSelection="true">
+                app:singleSelection="true"
+                app:chipSpacing="8dp">
 
+                <!-- SEMUA -->
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipSemua"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Semua"
-                    android:checked="true"/>
+                    android:checked="true"
 
+                    app:chipBackgroundColor="@android:color/white"
+                    app:chipStrokeColor="@color/primaryGreen"
+                    app:chipStrokeWidth="1dp"
+                    android:textColor="@color/primaryGreen"/>
+
+                <!-- INFORMASI -->
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipInfo"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Informasi"/>
+                    android:text="Informasi"
 
+                    app:chipBackgroundColor="@android:color/white"
+                    app:chipStrokeColor="@color/primaryGreen"
+                    app:chipStrokeWidth="1dp"
+                    android:textColor="@color/primaryGreen"/>
+
+                <!-- BANTUAN -->
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipBantuan"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bantuan"/>
+                    android:text="Bantuan"
 
+                    app:chipBackgroundColor="@android:color/white"
+                    app:chipStrokeColor="@color/primaryGreen"
+                    app:chipStrokeWidth="1dp"
+                    android:textColor="@color/primaryGreen"/>
+
+                <!-- AKUN -->
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipAkun"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Akun"/>
+                    android:text="Akun"
+
+                    app:chipBackgroundColor="@android:color/white"
+                    app:chipStrokeColor="@color/primaryGreen"
+                    app:chipStrokeWidth="1dp"
+                    android:textColor="@color/primaryGreen"/>
 
             </com.google.android.material.chip.ChipGroup>
 
@@ -72,7 +95,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- LIST VIEW -->
+    <!-- LIST CONTENT -->
     <ListView
         android:id="@+id/listViewItems"
         android:layout_width="match_parent"
@@ -80,6 +103,7 @@
         android:padding="8dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
+    <!-- LOGOUT BUTTON -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogout"
         android:layout_width="match_parent"

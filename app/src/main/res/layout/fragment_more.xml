@@ -6,20 +6,29 @@
     android:layout_height="match_parent"
     android:background="@color/accentGreen">
 
-    <!-- TOOLBAR (FIX DI ATAS) -->
+    <!-- 🌊 WAVE HEADER -->
+    <View
+        android:id="@+id/background_header"
+        android:layout_width="0dp"
+        android:layout_height="175dp"
+        android:background="@drawable/bg_header_wave"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- TOOLBAR -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/primaryGreen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/transparent"
         app:title="Profile"
-        app:titleTextColor="@android:color/white" />
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- SCROLL CONTENT -->
+    <!-- CONTENT -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -32,9 +41,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="20dp">
 
-            <!-- CARD PROFILE -->
+            <!-- ================= PROFILE CARD ================= -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,9 +56,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:padding="20dp">
+                    android:padding="24dp">
 
-                    <!-- FOTO BULAT TANPA DRAWABLE -->
+                    <!-- FOTO -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="110dp"
                         android:layout_height="110dp"
@@ -61,7 +70,6 @@
                             android:layout_height="match_parent"
                             android:src="@drawable/haya"
                             android:scaleType="centerCrop"/>
-
                     </com.google.android.material.card.MaterialCardView>
 
                     <TextView
@@ -91,11 +99,15 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- SOSIAL MEDIA -->
+            <!-- SPACING -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
+
+            <!-- ================= SOCIAL MEDIA ================= -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="6dp"
                 app:cardBackgroundColor="@color/white">
@@ -112,21 +124,19 @@
                         android:text="Sosial Media"
                         android:textStyle="bold"
                         android:textSize="16sp"
-                        android:textColor="@color/primaryGreen"/>
+                        android:textColor="@color/primaryGreen"
+                        android:layout_marginBottom="12dp"/>
 
-                    <!-- LINKEDIN -->
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnLinkedin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="LinkedIn"
                         android:textAllCaps="false"
-                        android:layout_marginTop="10dp"
                         android:textColor="@color/primaryGreen"
                         app:cornerRadius="30dp"
                         app:backgroundTint="@color/accentGreen"/>
 
-                    <!-- GITHUB -->
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnGithub"
                         android:layout_width="match_parent"
@@ -138,7 +148,6 @@
                         app:cornerRadius="30dp"
                         app:backgroundTint="@color/accentGreen"/>
 
-                    <!-- INSTAGRAM -->
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnInstagram"
                         android:layout_width="match_parent"
@@ -154,11 +163,15 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- DESKRIPSI -->
+            <!-- SPACING -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
+
+            <!-- ================= DESCRIPTION ================= -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="6dp"
                 app:cardBackgroundColor="@color/white">
@@ -166,9 +179,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Aplikasi Mobile SIBANSOS merupakan sistem berbasis mobile yang dikembangkan untuk mempermudah pengelolaan dan penyaluran bantuan sosial secara digital, agar lebih cepat, transparan, dan efisien"
+                    android:text="Aplikasi Mobile SIBANSOS merupakan sistem berbasis mobile yang dikembangkan untuk mempermudah pengelolaan dan penyaluran bantuan sosial secara digital, agar lebih cepat, transparan, dan efisien."
                     android:padding="16dp"
-                    android:textColor="@color/textColor"/>
+                    android:textColor="@color/textColor"
+                    android:lineSpacingExtra="4dp"/>
 
             </com.google.android.material.card.MaterialCardView>
 
