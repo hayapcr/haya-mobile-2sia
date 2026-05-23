@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import com.example.haya_sparkle.Pertemuan10.TenthActivity
 import com.example.haya_sparkle.Pertemuan2.SecondActivity
 import com.example.haya_sparkle.Pertemuan4.Custom1Activity
 import com.example.haya_sparkle.Pertemuan4.Custom2Activity
@@ -77,6 +78,14 @@ class HomeFragment : Fragment() {
                     requireContext(),
                     WebViewActivity::class.java
                 )
+            )
+        }
+
+        // Publikasi
+        binding.btnPertemuan10.setOnClickListener {
+
+            startActivity(
+                Intent(requireContext(), TenthActivity::class.java)
             )
         }
     }
