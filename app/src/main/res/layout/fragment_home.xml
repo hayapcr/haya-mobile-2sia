@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/accentGreen">
 
-    <!-- TOOLBAR -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
@@ -18,10 +17,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- SCROLL AREA -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fillViewport="true"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +32,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- CARD -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,14 +46,12 @@
                     android:gravity="center"
                     android:padding="24dp">
 
-                    <!-- LOGO -->
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/logobansos"
                         android:layout_marginBottom="16dp"/>
 
-                    <!-- JUDUL -->
                     <TextView
                         android:id="@+id/tvTitle"
                         android:layout_width="match_parent"
@@ -66,7 +62,6 @@
                         android:textStyle="bold"
                         android:gravity="center"/>
 
-                    <!-- DESKRIPSI -->
                     <TextView
                         android:id="@+id/tvDesc"
                         android:layout_width="match_parent"
@@ -78,14 +73,14 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="24dp"/>
 
-                    <!-- GRID LAYOUT -->
                     <androidx.gridlayout.widget.GridLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:columnCount="2"
+                        app:alignmentMode="alignMargins"
+                        app:columnOrderPreserved="false"
                         app:useDefaultMargins="true">
 
-                        <!-- CUSTOM 1 -->
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnCustom1"
                             android:layout_width="0dp"
@@ -100,10 +95,8 @@
                             app:iconPadding="8dp"
                             app:cornerRadius="20dp"
                             app:backgroundTint="@color/white"
-                            app:layout_columnWeight="1"
-                            app:layout_gravity="fill_horizontal"/>
+                            app:layout_columnWeight="1" />
 
-                        <!-- CUSTOM 2 -->
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnCustom2"
                             android:layout_width="0dp"
@@ -118,10 +111,8 @@
                             app:iconPadding="8dp"
                             app:cornerRadius="20dp"
                             app:backgroundTint="@color/white"
-                            app:layout_columnWeight="1"
-                            app:layout_gravity="fill_horizontal"/>
+                            app:layout_columnWeight="1" />
 
-                        <!-- RUMUS -->
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnRumus"
                             android:layout_width="0dp"
@@ -136,10 +127,8 @@
                             app:iconPadding="8dp"
                             app:cornerRadius="20dp"
                             app:backgroundTint="@color/white"
-                            app:layout_columnWeight="1"
-                            app:layout_gravity="fill_horizontal"/>
+                            app:layout_columnWeight="1" />
 
-                        <!-- WEBVIEW -->
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnWebview"
                             android:layout_width="0dp"
@@ -154,9 +143,25 @@
                             app:iconPadding="8dp"
                             app:cornerRadius="20dp"
                             app:backgroundTint="@color/white"
+                            app:layout_columnWeight="1" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnPertemuan10"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Publikasi"
+                            android:textAllCaps="false"
+                            android:textColor="@color/primaryGreen"
+                            app:icon="@drawable/ic_publikasi"
+                            app:iconSize="32dp"
+                            app:iconTint="@color/primaryGreen"
+                            app:iconGravity="textTop"
+                            app:iconPadding="8dp"
+                            app:cornerRadius="20dp"
+                            app:backgroundTint="@color/white"
+                            app:layout_columnSpan="2"
                             app:layout_columnWeight="1"
                             app:layout_gravity="fill_horizontal"/>
-
 
                     </androidx.gridlayout.widget.GridLayout>
 

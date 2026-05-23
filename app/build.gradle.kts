@@ -49,6 +49,7 @@ dependencies {
 
     // GRIDLAYOUT
     implementation("androidx.gridlayout:gridlayout:1.0.0")
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
