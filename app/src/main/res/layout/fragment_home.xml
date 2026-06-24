@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/accentGreen">
@@ -13,18 +14,18 @@
         android:background="@color/primaryGreen"
         android:title="Home"
         android:titleTextColor="@android:color/white"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,142 +36,163 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/primaryGreen"
                 app:cardCornerRadius="24dp"
-                app:cardElevation="8dp"
-                app:cardBackgroundColor="@color/primaryGreen">
+                app:cardElevation="4dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:gravity="center"
-                    android:padding="24dp">
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/logobansos"
-                        android:layout_marginBottom="16dp"/>
+                        android:layout_marginBottom="16dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/logobansos" />
 
                     <TextView
                         android:id="@+id/tvTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="SIBANSOS"
                         android:textColor="@color/white"
                         android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:gravity="center"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvDesc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
                         android:text="Menu pembelajaran dan fitur aplikasi Bina Desa"
                         android:textColor="@color/white"
-                        android:gravity="center"
-                        android:textSize="14sp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="24dp"/>
+                        android:textSize="14sp" />
 
-                    <androidx.gridlayout.widget.GridLayout
+                    <GridLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:columnCount="2"
-                        app:alignmentMode="alignMargins"
-                        app:columnOrderPreserved="false"
-                        app:useDefaultMargins="true">
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:useDefaultMargins="true">
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnCustom1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
                             android:text="Custom 1"
                             android:textAllCaps="false"
                             android:textColor="@color/primaryGreen"
+                            app:backgroundTint="@color/white"
+                            app:cornerRadius="16dp"
                             app:icon="@drawable/ic_custom1"
-                            app:iconSize="32dp"
-                            app:iconTint="@color/primaryGreen"
                             app:iconGravity="textTop"
                             app:iconPadding="8dp"
-                            app:cornerRadius="20dp"
-                            app:backgroundTint="@color/white"
-                            app:layout_columnWeight="1" />
+                            app:iconSize="32dp"
+                            app:iconTint="@color/primaryGreen" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnCustom2"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
                             android:text="Custom 2"
                             android:textAllCaps="false"
                             android:textColor="@color/primaryGreen"
+                            app:backgroundTint="@color/white"
+                            app:cornerRadius="16dp"
                             app:icon="@drawable/ic_custom2"
-                            app:iconSize="32dp"
-                            app:iconTint="@color/primaryGreen"
                             app:iconGravity="textTop"
                             app:iconPadding="8dp"
-                            app:cornerRadius="20dp"
-                            app:backgroundTint="@color/white"
-                            app:layout_columnWeight="1" />
+                            app:iconSize="32dp"
+                            app:iconTint="@color/primaryGreen" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnRumus"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
                             android:text="Rumus"
                             android:textAllCaps="false"
                             android:textColor="@color/primaryGreen"
+                            app:backgroundTint="@color/white"
+                            app:cornerRadius="16dp"
                             app:icon="@drawable/ic_rumus"
-                            app:iconSize="32dp"
-                            app:iconTint="@color/primaryGreen"
                             app:iconGravity="textTop"
                             app:iconPadding="8dp"
-                            app:cornerRadius="20dp"
-                            app:backgroundTint="@color/white"
-                            app:layout_columnWeight="1" />
+                            app:iconSize="32dp"
+                            app:iconTint="@color/primaryGreen" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnWebview"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
                             android:text="WebView"
                             android:textAllCaps="false"
                             android:textColor="@color/primaryGreen"
+                            app:backgroundTint="@color/white"
+                            app:cornerRadius="16dp"
                             app:icon="@drawable/ic_webview"
-                            app:iconSize="32dp"
-                            app:iconTint="@color/primaryGreen"
                             app:iconGravity="textTop"
                             app:iconPadding="8dp"
-                            app:cornerRadius="20dp"
-                            app:backgroundTint="@color/white"
-                            app:layout_columnWeight="1" />
+                            app:iconSize="32dp"
+                            app:iconTint="@color/primaryGreen" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnPertemuan10"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_columnSpan="2"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill_horizontal"
                             android:text="Publikasi"
                             android:textAllCaps="false"
                             android:textColor="@color/primaryGreen"
+                            app:backgroundTint="@color/white"
+                            app:cornerRadius="16dp"
                             app:icon="@drawable/ic_publikasi"
-                            app:iconSize="32dp"
-                            app:iconTint="@color/primaryGreen"
                             app:iconGravity="textTop"
                             app:iconPadding="8dp"
-                            app:cornerRadius="20dp"
-                            app:backgroundTint="@color/white"
-                            app:layout_columnSpan="2"
-                            app:layout_columnWeight="1"
-                            app:layout_gravity="fill_horizontal"/>
+                            app:iconSize="32dp"
+                            app:iconTint="@color/primaryGreen" />
 
-                    </androidx.gridlayout.widget.GridLayout>
+                    </GridLayout>
 
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
+            <TextView
+                android:id="@+id/tvBerita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="4dp"
+                android:text="Berita Terbaru"
+                android:textColor="@color/primaryGreen"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@android:layout/simple_list_item_2" />
+
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

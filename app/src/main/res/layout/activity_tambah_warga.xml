@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F4F6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Lengkap"
+            android:inputType="textPersonName"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:textSize="16sp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="18dp"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:backgroundTint="@android:color/white"
+            android:elevation="3dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+        <EditText
+            android:id="@+id/etNik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:hint="Nomor Induk Kependudukan (NIK)"
+            android:inputType="number"
+            android:maxLength="16"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:textSize="16sp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="18dp"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:backgroundTint="@android:color/white"
+            android:elevation="3dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+        <EditText
+            android:id="@+id/etAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:hint="Alamat Rumah"
+            android:inputType="textPostalAddress"
+            android:gravity="top"
+            android:minLines="3"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:textSize="16sp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="18dp"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:backgroundTint="@android:color/white"
+            android:elevation="3dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+        <EditText
+            android:id="@+id/etPekerjaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:hint="Pekerjaan"
+            android:inputType="text"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:textSize="16sp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="18dp"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:backgroundTint="@android:color/white"
+            android:elevation="3dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+        <EditText
+            android:id="@+id/etKontak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:hint="Nomor Kontak / WA"
+            android:inputType="phone"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:textSize="16sp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="18dp"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:backgroundTint="@android:color/white"
+            android:elevation="3dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="36dp"
+            android:text="Simpan Data Warga"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/primaryGreen"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:elevation="6dp"
+            android:stateListAnimator="@null"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_menu_save"
+            app:iconGravity="textStart"
+            app:iconPadding="12dp"
+            app:rippleColor="#40FFFFFF"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -11,6 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HayaSparkle">
         <activity
+            android:name=".Pertemuan10.TambahWargaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Pertemuan10.TambahPenerimaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Pertemuan11.OnBoardingActivity"
+            android:exported="false" />
+        <activity
             android:name=".Pertemuan10.TenthActivity"
             android:exported="false" />
         <activity
