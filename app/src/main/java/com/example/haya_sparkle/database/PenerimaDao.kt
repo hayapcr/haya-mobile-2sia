@@ -9,11 +9,11 @@ import androidx.room.Query
 interface PenerimaDao {
 
     @Insert
-    suspend fun insert(data: PenerimaEntity)
+    suspend fun insert(data: PenerimaEntity): Long
 
     @Query("SELECT * FROM penerima")
     suspend fun getAll(): List<PenerimaEntity>
 
     @Delete
-    suspend fun delete(data: PenerimaEntity)
+    suspend fun delete(data: PenerimaEntity): Int
 }

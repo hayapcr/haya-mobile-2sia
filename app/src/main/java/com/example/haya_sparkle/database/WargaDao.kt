@@ -9,11 +9,11 @@ import androidx.room.Query
 interface WargaDao {
 
     @Insert
-    suspend fun insert(warga: WargaEntity)
+    suspend fun insert(warga: WargaEntity): Long
 
     @Query("SELECT * FROM warga")
     suspend fun getAll(): List<WargaEntity>
 
     @Delete
-    suspend fun delete(data: WargaEntity)
+    suspend fun delete(data: WargaEntity): Int
 }

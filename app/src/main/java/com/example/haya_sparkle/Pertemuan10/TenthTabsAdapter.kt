@@ -3,6 +3,7 @@ package com.example.haya_sparkle.Pertemuan10
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.haya_sparkle.pertemuan10.TabBFragment
 
 class TenthTabsAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
 
