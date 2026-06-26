@@ -19,7 +19,8 @@
             android:exported="false"/>
 
         <activity
-            android:name=".Pertemuan14.ReminderActivity"/>
+            android:name=".Pertemuan14.ReminderActivity"
+            android:exported="false"/>
 
         <activity
             android:name=".Pertemuan10.TambahWargaActivity"

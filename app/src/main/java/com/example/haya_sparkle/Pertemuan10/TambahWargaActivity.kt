@@ -1,15 +1,16 @@
 package com.example.haya_sparkle.Pertemuan10
 
+import android.content.Intent
+import android.icu.util.Calendar
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.example.haya_sparkle.R
 import com.example.haya_sparkle.database.DatabaseProvider
 import com.example.haya_sparkle.database.WargaEntity
 import com.example.haya_sparkle.databinding.ActivityTambahWargaBinding
+import com.example.haya_sparkle.utils.NotificationHelper
+import com.example.haya_sparkle.utils.ReminderHelper
 import kotlinx.coroutines.launch
 
 class TambahWargaActivity : AppCompatActivity() {
@@ -19,15 +20,14 @@ class TambahWargaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding =
-            ActivityTambahWargaBinding.inflate(layoutInflater)
-
+        binding = ActivityTambahWargaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.btnSimpan.setOnClickListener {
 
             lifecycleScope.launch {
 
+                // Simpan data
                 DatabaseProvider
                     .getDatabase(this@TambahWargaActivity)
                     .wargaDao()
@@ -41,6 +41,40 @@ class TambahWargaActivity : AppCompatActivity() {
                         )
                     )
 
+                // Notifikasi langsung
+                NotificationHelper.showNotification(
+                    this@TambahWargaActivity,
+                    "Bina Desa",
+                    "Data warga berhasil ditambahkan",
+                    Intent(
+                        this@TambahWargaActivity,
+                        TenthActivity::class.java
+                    )
+                )
+
+                // Reminder 1 menit
+                val calendar =
+                    Calendar.getInstance().apply {
+                        add(Calendar.MINUTE, 1)
+                    }
+
+                ReminderHelper.setReminder(
+                    context = this@TambahWargaActivity,
+                    hour = calendar.get(Calendar.HOUR_OF_DAY),
+                    minute = calendar.get(Calendar.MINUTE),
+                    title = "Bina Desa",
+                    message = "Jangan lupa memperbarui data warga.",
+                    targetActivity = TenthActivity::class.java
+                )
+
+                // Toast
+                Toast.makeText(
+                    this@TambahWargaActivity,
+                    "Silakan tunggu 1 menit untuk menerima pengingat.",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+                // Tutup Activity
                 finish()
             }
         }

@@ -13,30 +13,42 @@ object ReminderHelper {
         hour: Int,
         minute: Int,
         title: String,
-        message: String
+        message: String,
+        targetActivity: Class<*>
     ) {
 
         val calendar = Calendar.getInstance().apply {
+
             set(Calendar.HOUR_OF_DAY, hour)
             set(Calendar.MINUTE, minute)
             set(Calendar.SECOND, 0)
+
+            if (before(Calendar.getInstance())) {
+                add(Calendar.DAY_OF_MONTH, 1)
+            }
         }
 
         val intent = Intent(
             context,
             ReminderReceiver::class.java
         ).apply {
+
             putExtra("title", title)
             putExtra("message", message)
+            putExtra(
+                "target_activity",
+                targetActivity.name
+            )
         }
 
-        val pendingIntent = PendingIntent.getBroadcast(
-            context,
-            0,
-            intent,
-            PendingIntent.FLAG_UPDATE_CURRENT or
-                    PendingIntent.FLAG_IMMUTABLE
-        )
+        val pendingIntent =
+            PendingIntent.getBroadcast(
+                context,
+                0,
+                intent,
+                PendingIntent.FLAG_UPDATE_CURRENT or
+                        PendingIntent.FLAG_IMMUTABLE
+            )
 
         val alarmManager =
             context.getSystemService(

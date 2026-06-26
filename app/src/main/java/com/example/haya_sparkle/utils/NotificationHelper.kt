@@ -5,13 +5,15 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.Build
 import androidx.core.app.NotificationCompat
+import androidx.core.content.ContextCompat
 import com.example.haya_sparkle.R
 
 object NotificationHelper {
 
-    private const val CHANNEL_ID = "sibansos_channel"
+    private const val CHANNEL_ID = "default_channel"
 
     fun showNotification(
         context: Context,
@@ -30,7 +32,7 @@ object NotificationHelper {
             val channel =
                 NotificationChannel(
                     CHANNEL_ID,
-                    "SIBANSOS",
+                    "General",
                     NotificationManager.IMPORTANCE_HIGH
                 )
 
@@ -46,17 +48,20 @@ object NotificationHelper {
                         PendingIntent.FLAG_IMMUTABLE
             )
 
-        val notification =
-            NotificationCompat.Builder(
-                context,
-                CHANNEL_ID
-            )
-                .setSmallIcon(R.drawable.ic_notification)
-                .setContentTitle(title)
-                .setContentText(message)
-                .setAutoCancel(true)
-                .setContentIntent(pendingIntent)
-                .build()
+        val bitmap = BitmapFactory.decodeResource(
+            context.resources,
+            R.mipmap.ic_launcher
+        )
+
+        val notification = NotificationCompat.Builder(context, CHANNEL_ID)
+            .setSmallIcon(R.drawable.ic_notification)
+            .setLargeIcon(bitmap)
+            .setContentTitle(title)
+            .setContentText(message)
+            .setColor(ContextCompat.getColor(context, R.color.primaryGreen))
+            .setAutoCancel(true)
+            .setContentIntent(pendingIntent)
+            .build()
 
         manager.notify(
             System.currentTimeMillis().toInt(),

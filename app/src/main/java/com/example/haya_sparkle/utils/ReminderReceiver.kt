@@ -20,11 +20,34 @@ class ReminderReceiver : BroadcastReceiver() {
             intent.getStringExtra("message")
                 ?: "Reminder"
 
-        val targetIntent =
-            Intent(
-                context,
-                TenthActivity::class.java
+        val targetClassName =
+            intent.getStringExtra(
+                "target_activity"
             )
+
+        val targetIntent =
+            if (!targetClassName.isNullOrEmpty()) {
+
+                val clazz =
+                    Class.forName(targetClassName)
+
+                Intent(
+                    context,
+                    clazz
+                ).apply {
+
+                    flags =
+                        Intent.FLAG_ACTIVITY_NEW_TASK or
+                                Intent.FLAG_ACTIVITY_CLEAR_TASK
+                }
+
+            } else {
+
+                Intent(
+                    context,
+                    TenthActivity::class.java
+                )
+            }
 
         NotificationHelper.showNotification(
             context,
